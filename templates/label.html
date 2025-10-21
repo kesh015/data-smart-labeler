@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Data Labeler</title>
+</head>
+<body>
+  <h2>Label Your Text Data</h2>
+
+  {% for text in texts %}
+    <div>
+      <p><b>Text {{ loop.index }}:</b> {{ text }}</p>
+
+      {% if suggest_index is defined and suggest_index == loop.index0 %}
+        <p><b>AI Suggestion:</b> {{ ai_label }}</p>
+      {% endif %}
+
+      <form method="post" action="{{ url_for('save_label') }}">
+        <input type="hidden" name="index" value="{{ loop.index0 }}">
+        <input type="text" name="label" placeholder="Enter label" value="{{ labels[loop.index0] }}">
+        <button type="submit">Save Label</button>
+        <a href="{{ url_for('ai_suggest', index=loop.index0) }}">💡 Get AI Suggestion</a>
+      </form>
+    </div>
+  {% endfor %}
+</body>
+</html>
