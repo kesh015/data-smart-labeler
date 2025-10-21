@@ -96,10 +96,12 @@ Integration with real AI APIs (OpenAI, Hugging Face)
 
 Support for multi-label classification
 
+“Label smarter, not harder.” ⚡
+
 👨‍💻 Author
 C Keshav Reddy
 💼 Aspiring GenAI & Data Engineer | Innovation-focused Builder
 
-🔗 LinkedIn : 
+🔗 LinkedIn : www.linkedin.com/in/keshav-reddy-035674215
 
-“Label smarter, not harder.” ⚡
+
